@@ -1,0 +1,26 @@
+a { color:green; }
+a:visited { color:purple; }
+.centertext { width:750; margin-left:auto; margin-right:auto; }
+
+.navigation { text-align:center; }
+.navigation li { display:inline; }
+.navigation li a { text-decoration:none; display:inline-block; padding:10px;
+                   font-size:30; color:green; }
+.home a:hover { color:red; }
+.blog a:hover { color:blue; }
+.gallery a:hover { color:orange; }
+
+#bloglinks ul { list-style-type:none; }
+#bloglinks li a:link { text-decoration:none; color:green; font-size:20; }
+#bloglinks li a:visited { text-decoration:none; color:green !important;}
+#bloglinks li a:hover { text-decoration:none; color:blue !important; }
+#bloglinks li a:active { text-decoration:none; color:orange !important; }
+
+#blogtitle { font-size:25; border:0; margin:0; padding:0 }
+
+#postinfo { font-size:14; font-style:italic; margin-top:0; }
+
+#booklistauthor { font-style:italic; }
+
+#bookcomplete { text-decoration:line-through; }
+

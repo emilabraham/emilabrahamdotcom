@@ -1,0 +1,11 @@
+{% extends "home.html" %}
+
+{% block title %} {{ selected_album.title }} {% endblock %}
+
+{% block content %}
+<ul>
+{% for photo in selected_album.photo_set.all %}
+<li><a href="{{ photo.image.url}}">{{ photo.caption }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

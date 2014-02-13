@@ -1,0 +1,19 @@
+{% extends "home.html" %}
+
+{% block title %} emilabraham.com:blog {% endblock %}
+
+{% block content %}
+{% if all_posts %}
+  <div id="bloglinks">
+  <ul>
+  {% for post in all_posts %}
+  <li><a href="{% url 'blog:detail' post.slug %}">{{ post.title }}</a>
+  <p id="postinfo">Posted {{ post.pub_date|timesince }} ago</p>
+  </li>
+  {% endfor %}
+  </ul>
+  </div>
+{% else %}
+  <p>No posts available</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "home.html" %}
+
+{% block title %} emilabraham.com:booklist {% endblock %}
+
+{% block content %}
+{% if all_books %}
+  <ul>
+    {% for book in all_books %}
+      {% if book.completion == True %}
+      <li id="bookcomplete">{{ book.title }}
+      <span id="booklistauthor"> by {{ book.author }} </span></li> 
+      {% else %}
+      <li>{{ book.title }}
+      <span id="booklistauthor"> by {{ book.author }} </span></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No books available</p>
+{% endif %}
+{% endblock %}

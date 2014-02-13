@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<html>
+<head>
+  <title>{% block title %}emilabraham.com{% endblock %}</title>
+</head>
+
+<body>
+  <div class="navigation">
+  {% block navigation %}
+  <ul>
+    <li class="home"><a href="/">Home</a></li>
+    <li class="blog"><a href="/blog/">Blog</a></li>
+    <li class="gallery"><a href="/gallery/">Gallery</a></li>
+  <ul>
+  {% endblock %}
+  </div>
+  <div class="centertext">
+  {% block content %}
+    <p>Welcome to emilabraham.com! This is a terrible website.
+    Don't click on any of the links. They will bore you. Nothing even remotely
+    creative went into the making of this website. You can never expect anything 
+    awesome in the future either. This website is bad and it will still be bad 
+    if you visit tomorrow or the day after.</p>
+    <p>But here's a <a href="/booklist/">book list</a> if you're interested.</p>
+  {% endblock %}
+  </div>
+</body>
+</html>

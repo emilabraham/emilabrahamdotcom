@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+
+{% block title %} emilabraham.com:gallery {% endblock %}
+
+{% block content %}
+{% if all_albums %}
+  <ul>
+  {% for album in all_albums %}
+  <li><a href="{% url 'gallery:detail' album.slug %}">{{ album.title }}</a>
+  {% endfor %}
+{% else %}
+  <p>No albums available</p>
+{% endif %}
+{% endblock %}
