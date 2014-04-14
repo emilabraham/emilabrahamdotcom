@@ -65,8 +65,11 @@ WSGI_APPLICATION = 'emilabrahamdotcom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'emilabrahamdatabase',
+        'USER': 'emilabraham',
+        'PASSWORD': 'skittles1414',
+        'HOST': 'mysql.emilabraham.com',
     }
 }
 
